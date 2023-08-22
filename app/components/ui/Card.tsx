@@ -1,6 +1,8 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 
 interface CardProps {
   variant: string;
@@ -9,8 +11,11 @@ interface CardProps {
 }
 
 const Card = ({ variant, imgPath, path}: CardProps) => {
+
+  const pathname = usePathname()  
+
   return ( 
-    <div className="w-138">
+    <div className="w-138 block">
       <div
         className={`
           ${variant === 'voting'
@@ -26,11 +31,14 @@ const Card = ({ variant, imgPath, path}: CardProps) => {
           alt="pet"
           width={100}
           height={125}
+          style={{width: 'auto', height: 'auto'}}
         />
       </div>
-      <Link href={path} className="uppercase flex items-center justify-center w-full bg-white rounded-[10px] py-3 text-paw_pry text-12">
+      <Link 
+        href={path} 
+        className={`${pathname === `/${path}` ? 'bg-paw_pry text-white' : 'bg-white text-paw_pry'} uppercase flex items-center justify-center w-full  rounded-[10px] py-3 text-paw_pry text-12 hover:bg-hover_pry`}>
           {variant}
-        </Link>
+      </Link>
     </div>
    );
 }

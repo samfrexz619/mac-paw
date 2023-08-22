@@ -17,16 +17,23 @@ const config: Config = {
         paw_pry: '#FF868E',
         voting: 'rgba(255, 255, 255, 0.60)',
         breed: '#FBE0DC',
-        gallery: 'rgba(255, 255, 255, 0.60)'
+        gallery: 'rgba(255, 255, 255, 0.60)',
+        paw_black: '#1D1D1D',
+        paw_grey: '#8C8C8C',
+        hover_pry: '#FBE0DC',
       },
       borderRadius: {
         20: '20px'
       },
       spacing: {
-        138: '138px'
+        138: '138px',
+        55: '55%',
+        45: '45%'
       },
       fontSize: {
-        12: '12px'
+        12: '12px',
+        44: '44px',
+        20: '20px',
       }
     },
   },

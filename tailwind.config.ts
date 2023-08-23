@@ -27,8 +27,8 @@ const config: Config = {
       },
       spacing: {
         138: '138px',
-        55: '55%',
-        45: '45%'
+        57: '57%',
+        43: '43%'
       },
       fontSize: {
         12: '12px',

@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Jost } from 'next/font/google'
 import DefaultLayout from './components/Default'
+import variable from '@/components/Main.module.scss'
 
 const jost = Jost({
   subsets: ['latin-ext'],
@@ -24,8 +25,8 @@ export default function RootLayout({
           <div className='w-1/2'>
             <DefaultLayout  />
           </div>
-          <section className='w-1/2 bg-green-100 fixed left-1/2 inset-y-0 flex-col'>
-            <div className='overflow-y-auto'>
+          <section className={`w-1/2 fixed left-1/2 inset-y-0 flex-col flex`}>
+            <div className={`overflow-y-auto ${variable.reset}`}>
               {children}
             </div>
           </section>
@@ -34,3 +35,4 @@ export default function RootLayout({
     </html>
   )
 }
+// w-1/2 

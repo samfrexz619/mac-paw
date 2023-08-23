@@ -1,0 +1,15 @@
+.home_bg {
+  background-image: url('/assets/images/girl-pet.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reset {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

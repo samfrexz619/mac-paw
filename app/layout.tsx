@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Jost } from 'next/font/google'
 import DefaultLayout from './components/Default'
+import { Provider } from './provider'
 import variable from '@/components/Main.module.scss'
 
 const jost = Jost({
@@ -20,18 +21,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${jost.className} bg-[#F8F8F7]`}>
-        <main className='flex justify-between'>
-          <div className='w-1/2'>
-            <DefaultLayout  />
-          </div>
-          <section className={`w-1/2 fixed left-1/2 inset-y-0 flex-col flex`}>
-            <div className={`overflow-y-auto ${variable.reset}`}>
-              {children}
+      <Provider>
+        <body className={`${jost.className} bg-[#F8F8F7] dark:bg-paw_black`}>
+          <main className='lg:flex lg:justify-between block'>
+            <div className='hidden lg:block lg:w-1/2 w-0'>
+              <DefaultLayout  />
             </div>
-          </section>
-        </main>
-      </body>
+            <section className={`lg:w-1/2 w-full lg:fixed lg:left-1/2 lg:inset-y-0 flex-col flex`}>
+              <div className={`overflow-y-auto ${variable.reset}`}>
+                {children}
+              </div>
+            </section>
+          </main>
+        </body>
+      </Provider>
     </html>
   )
 }

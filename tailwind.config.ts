@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -21,6 +22,7 @@ const config: Config = {
         paw_black: '#1D1D1D',
         paw_grey: '#8C8C8C',
         hover_pry: '#FBE0DC',
+        black_10: 'rgba(255, 255, 255, 0.10)',
       },
       borderRadius: {
         20: '20px'

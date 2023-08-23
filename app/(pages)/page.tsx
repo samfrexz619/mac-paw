@@ -1,8 +1,14 @@
-import variable from '@/components/Main.module.scss'
+import DefaultLayout from '@/components/Default'
+
 
 export default function Home() {
   return (
-    <main className={`${variable.home_bg} my-4 h-screen`}>
-    </main>
+    <>
+      <main className="bg-[url('/assets/images/girl-pet.png')] bg-cover bg-no-repeat my-2 lg:h-screen dark:bg-[url('/assets/images/dark-girl.png')]">
+      </main>
+      <div className='lg:hidden block w-full'>
+        <DefaultLayout  />
+      </div>
+    </>
   )
 }

@@ -8,14 +8,11 @@ interface ToggleProps {
   onToggled: ()=> void;
 }
 
-
 const ToggleSwitch = ({isToggled, onToggled}: ToggleProps) => {
 
   const { theme, setTheme } = useTheme()
 
   const [mounted, setMounted] = useState(false)
-
-  // const [isToggled, setIsToggled] = useState(false)
 
   useEffect(() => {
     setMounted(true)

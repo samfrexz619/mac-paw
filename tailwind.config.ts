@@ -23,6 +23,8 @@ const config: Config = {
         paw_grey: '#8C8C8C',
         hover_pry: '#FBE0DC',
         black_10: 'rgba(255, 255, 255, 0.10)',
+        bgg: 'rgba(0, 0, 0, 0.4)',
+        grey_10: '#F8F8F7',
       },
       borderRadius: {
         20: '20px'

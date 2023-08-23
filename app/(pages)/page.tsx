@@ -1,4 +1,5 @@
 import DefaultLayout from '@/components/Default'
+import MobileNavigation from '@/components/MobileNav'
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <div className='lg:hidden block w-full'>
         <DefaultLayout  />
       </div>
+      <MobileNavigation  />
     </>
   )
 }

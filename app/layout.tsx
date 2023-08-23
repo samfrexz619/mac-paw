@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Provider>
-        <body className={`${jost.className} bg-[#F8F8F7] dark:bg-paw_black`}>
+        <body className={`${jost.className} bg-grey_10 dark:bg-paw_black`}>
           <main className='lg:flex lg:justify-between block'>
             <div className='hidden lg:block lg:w-1/2 w-0'>
               <DefaultLayout  />

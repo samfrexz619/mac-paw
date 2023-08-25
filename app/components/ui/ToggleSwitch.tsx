@@ -16,7 +16,7 @@ const ToggleSwitch = ({isToggled, onToggled}: ToggleProps) => {
 
   useEffect(() => {
     setMounted(true)
-  }, [])
+  }, [theme])
 
   if (!mounted) {
     return null

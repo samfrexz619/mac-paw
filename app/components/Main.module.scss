@@ -47,3 +47,21 @@ input:checked + .toggle__slider::before {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.textInput {
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  padding: 8px 17px;
+  align-items: center;
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background: inherit;
+    color: #8C8C8C;
+    font-size: 20px;
+  }
+ 
+}

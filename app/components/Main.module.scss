@@ -53,8 +53,9 @@ input:checked + .toggle__slider::before {
   background: #fff;
   border-radius: 20px;
   display: flex;
-  padding: 8px 17px;
+  padding: 0 17px;
   align-items: center;
+  height: 60px;
   input {
     outline: none;
     border: none;
@@ -62,6 +63,7 @@ input:checked + .toggle__slider::before {
     background: inherit;
     color: #8C8C8C;
     font-size: 20px;
+    height: 100%;
   }
  
 }

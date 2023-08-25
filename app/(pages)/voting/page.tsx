@@ -1,6 +1,5 @@
 // 'use client'
 // import { useState } from "react";
-import SearchInput from "@/components/ui/SearchInput";
 
 
 const Voting = () => {
@@ -15,11 +14,7 @@ const Voting = () => {
   return ( 
     <div>
       <h1>voting</h1>
-      <div className="py-4 px-12">
-        <SearchInput
-          placeholder="Search for breeds by name" 
-        />
-      </div>
+      
       
     </div>
    );

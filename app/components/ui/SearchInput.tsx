@@ -1,7 +1,4 @@
 import variable from '../Main.module.scss'
-import Icon from './Icon';
-
-
 
 interface Props {
   placeholder: string;
@@ -15,13 +12,10 @@ const SearchInput = ({ placeholder }: Props) => {
         type="search"
         placeholder={placeholder}
       />
-      <span>
-        <Icon 
-          iconName='search'
-          width='20'
-          height='20'
-          viewBox='0 0 20 20'
-        />
+      <span className='w-10 h-10 text-paw_pry bg-hover_pry rounded-[10px] flex justify-center items-center'>
+        <svg width='20' height='20' viewBox='0 0 20 20'>
+          <use xlinkHref={`/sprite.svg#search`} />
+        </svg>
       </span>
     </div>
    );

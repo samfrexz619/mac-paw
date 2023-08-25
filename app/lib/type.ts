@@ -4,3 +4,9 @@ export interface CardItems {
   img: string;
   path: string;
 }
+
+interface EmojiLinks {
+  id: number;
+  emoji: string;
+  path: string;
+}

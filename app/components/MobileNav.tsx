@@ -2,12 +2,18 @@
 import { cardItems } from "@/lib/utils";
 import Card from "./ui/Card";
 
-const MobileNavigation = () => {
+
+interface Prop {
+  toggleNav: ()=> void;
+}
+
+
+const MobileNavigation = ({toggleNav}: Prop) => {
   return ( 
-    <nav className="fixed inset-y-0 w-full bg-bgg md:hidden flex justify-end">
-      <div className="w-[300px] relative bg-grey_10 h-screen">
+    <nav onClick={toggleNav} className="fixed inset-y-0 w-full bg-bgg md:hidden flex justify-end">
+      <div onClick={e => e.stopPropagation()} className="w-[300px] relative bg-grey_10 h-screen">
         <div className="w-full px-4 flex justify-end py-4">
-          <button className="bg-white h-11 w-11 rounded-xl flex items-center justify-center text-paw_pry">
+          <button onClick={toggleNav} className="bg-white h-11 w-11 rounded-xl flex items-center justify-center text-paw_pry">
             <svg width="18" height="18" viewBox="0 0 18 18">
               <use xlinkHref="/sprite.svg#close" />
             </svg>

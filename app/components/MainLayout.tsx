@@ -42,7 +42,7 @@ const MainLayout = ({children}: Props) => {
       { pathname !== '/' &&
         <header className="py-10 px-7 w-full items-center justify-between">
           <div className="flex lg:flex-row w-full justify-between lg:gap-x-3 flex-wrap lg:flex-nowrap gap-y-5">
-            <button onClick={handleNavigation} className="lg:hidden h-606 w-606 block bg-white rounded-20 text-paw_pry">
+            <button onClick={handleNavigation} className="lg:hidden h-606 w-606 block bg-white rounded-20 text-paw_pry dark:bg-bgg">
               <span className="w-full flex justify-center items-center h-full mt-1">
                 <svg width='30' height='30' viewBox='0 0 30 30'>
                   <use xlinkHref="/sprite.svg#menu" />
@@ -57,7 +57,7 @@ const MainLayout = ({children}: Props) => {
             <div className="flex gap-x-3 order-2 lg:order-1">
               {
                 emojiLinks.map(emoji => (
-                  <Link key={emoji.id} href={emoji.path} className={`bg-white h-606 w-606 rounded-20 flex justify-center items-center text-paw_pry`}>
+                  <Link key={emoji.id} href={emoji.path} className={`bg-white h-606 w-606 rounded-20 flex justify-center items-center text-paw_pry dark:bg-bgg`}>
                     <EmojiIcons name={emoji.emoji} />
                   </Link>
                 ))

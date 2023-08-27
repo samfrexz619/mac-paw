@@ -15,7 +15,7 @@ const Card = ({ variant, imgPath, path}: CardProps) => {
   const pathname = usePathname()  
 
   return ( 
-    <div className="md:w-138 block">
+    <div className="lg:w-138 block w-full">
       <Link
         href={path}
         className={`
@@ -25,7 +25,7 @@ const Card = ({ variant, imgPath, path}: CardProps) => {
           ? 'bg-[#97EAB9] border-breed'
           : 'bg-[#FFD280] border-gallery'
         }
-          rounded-20 border-solid border-4 w-full h-[198px] md:flex items-center justify-center mb-5 hidden`
+          rounded-20 border-solid border-4 w-full h-[198px] lg:flex items-center justify-center mb-5 hidden`
         }>
         <Image
           src={imgPath}

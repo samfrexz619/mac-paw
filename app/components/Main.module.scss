@@ -48,22 +48,3 @@ input:checked + .toggle__slider::before {
   scrollbar-width: none;  /* Firefox */
 }
 
-.textInput {
-  width: 100%;
-  background: #fff;
-  border-radius: 20px;
-  display: flex;
-  padding: 0 17px;
-  align-items: center;
-  height: 60px;
-  input {
-    outline: none;
-    border: none;
-    width: 100%;
-    background: inherit;
-    color: #8C8C8C;
-    font-size: 20px;
-    height: 100%;
-  }
- 
-}

@@ -41,12 +41,12 @@ const DefaultLayout = () => {
         <p className="text-paw_black text-20 py-6 dark:text-white">
           Lets start using The Cat API
         </p>
-        <div className="flex md:gap-x-8 w-full flex-col gap-y-5 md:flex-row">
+        <div className="flex lg:gap-x-8 w-full flex-col gap-y-5 lg:flex-row">
           {
             cardItems.map(card => (
               <Card
                 key={card.id}
-                variant={card.variant}
+                variant={card.variant} 
                 path={card.path}
                 imgPath={card.img}
               />

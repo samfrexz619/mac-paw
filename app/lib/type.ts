@@ -10,3 +10,10 @@ interface EmojiLinks {
   emoji: string;
   path: string;
 }
+
+export interface CatData {
+  id: string;
+  url: string;
+  width: number;
+  height: number;
+}

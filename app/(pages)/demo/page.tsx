@@ -1,6 +1,4 @@
-import ImageSlider from "@/components/ui/ImageSlider";
-import Banner from "./Banner";
-
+import ImageSlider from "../../components/ui/ImageSlider";
 
 const url = 'https://api.thecatapi.com/v1/images/search?limit=10'
 
@@ -15,22 +13,20 @@ async function getData() {
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
- 
   return res.json()
 }
 
-const Voting = async() => {
+const Demo = async() => {
 
   const data = await getData()
-  
+
+  console.log(data);
+
   return ( 
-    <div className="py-5 bg-white rounded-20 mx-5 dark:bg-bgg">
-      <div className="px-7">
-        <ImageSlider data={data} indicator={false} reaction={true} />
-      </div>
-      
+    <div className="px-8">
+      <ImageSlider data={data} />
     </div>
    );
 }
  
-export default Voting;
+export default Demo;

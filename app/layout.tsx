@@ -28,7 +28,7 @@ export default function RootLayout({
             <div className='hidden lg:block lg:w-1/2 w-0'>
               <DefaultLayout  />
             </div>
-            <section className={`lg:w-1/2 w-full lg:fixed lg:left-1/2 lg:inset-y-0 flex-col flex bg-green-200`}>
+            <section className={`lg:w-1/2 w-full lg:fixed lg:left-1/2 lg:inset-y-0 flex-col flex`}>
               <div className={`overflow-y-auto ${variable.reset}`}>
                 <MainLayout>
                   {children}

@@ -5,6 +5,7 @@ import SearchInput from "./ui/SearchInput";
 import Link from "next/link";
 import EmojiIcons from "./ui/EmojiIcon";
 import MobileNavigation from "./MobileNav";
+// import { AppProvider } from "@/context/AppContext";
 
 interface Props {
   children: React.ReactNode

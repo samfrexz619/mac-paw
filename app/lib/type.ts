@@ -14,6 +14,6 @@ interface EmojiLinks {
 export interface CatData {
   id: string;
   url: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }

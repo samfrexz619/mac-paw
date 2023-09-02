@@ -1,8 +1,4 @@
-'use client'
-
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
 import { CatData } from "@/lib/type";
 import ReactionButton from "./ReactionBtn";
 
@@ -12,25 +8,20 @@ interface Props {
   data: CatData[];
   indicator: boolean;
   reaction: boolean;
+  currentSlide: number;
+  prevImage: ()=> void;
+  setCurrent: (idx: number)=> void; 
+  pathname: string;
+  getReactions: (reactions: 'like' | 'favorite' | 'dislike')=> void;
 }
 
-// const imageLoader = ({ src, width, quality }) => {
-//   return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-// }
+const ImageSlider = ({ data, indicator, reaction=false, setCurrent, currentSlide, prevImage, pathname, getReactions }: Props) => {
 
-const ImageSlider = ({ data, indicator, reaction=false }: Props) => {
-
-  const pathname = usePathname()
-
-  const [current, setCurrent] = useState(0)
-
-  // const nextImage =()=> {
+  
+    // const nextImage =()=> {
   //   setCurrent(current === data.length - 1 ? 0 : current + 1)
   // }
 
-  const prevImage =()=> {
-    setCurrent(current === 0 ? data.length - 1 : current - 1)
-  }
 
   return ( 
     <div className="w-full">
@@ -56,8 +47,8 @@ const ImageSlider = ({ data, indicator, reaction=false }: Props) => {
                 width={640}
                 height={360}
                 alt="random"
-                objectFit="contain"
-                className={`${current === idx ? 'w-[640px]' : 'w-[640px] hidden'} rounded-20 aspect-square`}
+                // style={{height: 'auto', width: 'auto'}}
+                className={`${currentSlide === idx ? 'w-[640px]' : 'w-[640px] hidden'} rounded-20 aspect-square`}
               />
             ))
           }
@@ -68,13 +59,17 @@ const ImageSlider = ({ data, indicator, reaction=false }: Props) => {
               <button
                 key={idx}
                 onClick={() => setCurrent(idx)}
-                className={`h-3 w-3 rounded-full ${current === idx ? 'bg-paw_pry' : 'bg-hover_pry'}`}></button>
+                className={`h-3 w-3 rounded-full ${currentSlide === idx ? 'bg-paw_pry' : 'bg-hover_pry'}`}></button>
             ))
           }
         </span>}
-        { reaction && <div className="absolute -bottom-4">
-          <ReactionButton  />
-        </div>}
+        { reaction && 
+          <div className="absolute -bottom-3">
+            <ReactionButton 
+              getReactions={getReactions} 
+            />
+          </div>
+       }
       </div>
     </div>
    );

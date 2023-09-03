@@ -6,7 +6,6 @@ type StateType = {
   likes: CatData[];
   favorites: CatData[];
   dislikes: CatData[];
-  reaction: string;
 }
 
 type Action = | {type: 'NEXT_IMG', payload: number} | {type: 'INDEX', payload: number} | {type: 'LIKE', payload: CatData} | {type: 'FAVORITE', payload: CatData} | {type: 'DISLIKE', payload: CatData}
@@ -18,7 +17,6 @@ export const initialState = {
   likes: [],
   favorites: [],
   dislikes: [],
-  reaction: ''
 }
 
 export const VoteReducer =(state: StateType, action: ActionType)=> {
@@ -40,7 +38,6 @@ export const VoteReducer =(state: StateType, action: ActionType)=> {
       return {
         ...state, 
         likes: [...state.likes, action.payload],
-        reaction: state.reaction = 'like'
       }
     }
    }
@@ -49,7 +46,6 @@ export const VoteReducer =(state: StateType, action: ActionType)=> {
       return {
         ...state, 
         favorites: [...state.favorites, action.payload],
-        reaction: state.reaction = 'favorite'
       }
     }
    }
@@ -58,7 +54,6 @@ export const VoteReducer =(state: StateType, action: ActionType)=> {
       return {
         ...state, 
         dislikes: [...state.favorites, action.payload],
-        reaction: state.reaction = 'dislike'
       }
     }
    }

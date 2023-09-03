@@ -45,9 +45,7 @@ const VotingContent = ({data}: Props) => {
     })
   }
 
-  console.log(state.reaction)
-  // console.log(state.dislikes)
-  // console.log(state.favorites)
+  // console.log(state.reaction)
 
   const pathname = usePathname()
 
@@ -71,7 +69,7 @@ const VotingContent = ({data}: Props) => {
           <UserActionLogs 
             key={like.id} 
             imgId={like.id}
-            emojis={state.reaction}
+            emojis='like'
           /> 
         ))
        }
@@ -80,7 +78,7 @@ const VotingContent = ({data}: Props) => {
           <UserActionLogs 
             key={favr.id} 
             imgId={favr.id}
-            emojis={state.reaction}
+            emojis='favorite'
           /> 
         ))
        }
@@ -89,7 +87,7 @@ const VotingContent = ({data}: Props) => {
           <UserActionLogs 
             key={dsl.id} 
             imgId={dsl.id}
-            emojis={state.reaction}
+            emojis='dislike'
           /> 
         ))
        }

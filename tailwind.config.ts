@@ -28,6 +28,8 @@ const config: Config = {
         dl: 'rgba(255, 134, 142, 0.20)',
         bgg: 'rgba(255, 255, 255, 0.05)',
         black_5: '#282828',
+        paw_green: '#97EAB9',
+        paw_yellow: '#FFD280',
       },
       borderRadius: {
         20: '20px',

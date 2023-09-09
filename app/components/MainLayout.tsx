@@ -15,21 +15,22 @@ const MainLayout = ({children}: Props) => {
 
   const emojiLinks = [
     {
-      path: '#',
-      emoji: 'happy',
-      id: 1
-    },
-    {
-      path: '#',
+      path: '/likes',
       emoji: 'like',
       id: 2
     },
     {
-      path: '#',
+      path: '/favorites',
+      emoji: 'favorite',
+      id: 1
+    },
+    {
+      path: '/dislikes',
       emoji: 'sad',
       id: 3
     },
   ]
+
   const pathname = usePathname()  
 
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false)
@@ -58,7 +59,8 @@ const MainLayout = ({children}: Props) => {
             <div className="flex gap-x-3 order-2 lg:order-1">
               {
                 emojiLinks.map(emoji => (
-                  <Link key={emoji.id} href={emoji.path} className={`bg-white h-606 w-606 rounded-20 flex justify-center items-center text-paw_pry dark:bg-bgg`}>
+                  <Link key={emoji.id} href={`${emoji.path}`} 
+                    className={` h-606 w-606 rounded-20 flex justify-center items-center dark:bg-bgg ${pathname === emoji.path ? 'bg-paw_pry text-white' : 'bg-white text-paw_pry'}`}>
                     <EmojiIcons name={emoji.emoji} />
                   </Link>
                 ))

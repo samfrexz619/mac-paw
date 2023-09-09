@@ -7,7 +7,7 @@ interface Props {
 
 const SearchInput = ({ placeholder }: Props) => {
   return ( 
-    <div className="dark:bg-bgg bg-white w-full flex h-606 rounded-20 px-4 items-center">
+    <div className="dark:bg-bgg bg-white w-full flex h-606 rounded-20 px-4 items-center focus-within:border-paw_pry focus-within:border focus:border-solid">
       <input 
         type="search"
         placeholder={placeholder}

@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import UserActionLogs from "./UserActionLogs";
 import ImageSlider from "@/components/ui/ImageSlider";
 import { CatData } from "@/lib/type";
-import { VoteReducer, initialState } from "./VoteReducer";
+import { ImgsReducer as VoteReducer, initialState } from "@/context/ImgsReducer";
 
 
 

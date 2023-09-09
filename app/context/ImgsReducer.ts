@@ -10,7 +10,7 @@ type StateType = {
 
 type Action = | {type: 'NEXT_IMG', payload: number} | {type: 'INDEX', payload: number} | {type: 'LIKE', payload: CatData} | {type: 'FAVORITE', payload: CatData} | {type: 'DISLIKE', payload: CatData}
 
-type ActionType = Action
+type ActionType = Action;
 
 export const initialState = {
   current: 0,
@@ -19,7 +19,7 @@ export const initialState = {
   dislikes: [],
 }
 
-export const VoteReducer =(state: StateType, action: ActionType)=> {
+export const ImgsReducer =(state: StateType, action: ActionType)=> {
   switch(action.type) {
    case 'NEXT_IMG': {
     return {

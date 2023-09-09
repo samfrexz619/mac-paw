@@ -1,8 +1,10 @@
-import ImageSlider from "@/components/ui/ImageSlider";
+import { Metadata } from "next";
 import { fetchCatData } from "../(api)/services/cat";
 import VotingContent from "./VotingContent";
 
-
+export const metadata: Metadata = {
+  title: 'voting'
+}
 const Voting = async() => {
 
   const data = await fetchCatData()
@@ -10,13 +12,6 @@ const Voting = async() => {
   return ( 
     <div className="py-5 bg-white rounded-20 mx-5 dark:bg-bgg">
       <VotingContent data={data} />
-      {/* <div className="px-7">
-        <ImageSlider 
-          data={data} 
-          indicator={false} 
-          reaction={true} 
-        />
-      </div> */}
       <div></div>
     </div>
    );

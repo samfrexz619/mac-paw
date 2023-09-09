@@ -8,7 +8,7 @@ const EmojiIcons = ({ name }: Prop) => {
   return ( 
     <span>
       {
-        name === 'like' 
+        name === 'like'
         ? <svg width='30' height='30' viewBox='0 0 30 30'>
             <use xlinkHref="/sprite.svg#happy" />
           </svg>

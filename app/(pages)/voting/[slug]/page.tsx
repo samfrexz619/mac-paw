@@ -1,8 +1,14 @@
 
+
+interface Props {
+  param: {
+    slug: string;
+  }
+}
 const VotingDetail = () => {
   return ( 
     <div>
-      <p>123</p>
+      <p>voting dynamic page </p>
     </div>
    );
 }
